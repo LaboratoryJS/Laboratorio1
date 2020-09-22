@@ -20,3 +20,11 @@ sumame(1,3,(dato)=>{//funcion flecha
 function(dato){//funciones de callback
     console.log(dato*2);
 });
+
+function master(numero1,numero2,suma,multiplica){
+    suma(numero1+numero2);
+    multiplica(numero1*numero2);
+    return true;
+}
+
+master(5,3,(dato)=>{console.log(dato)},(dato)=>{console.log(dato)});
