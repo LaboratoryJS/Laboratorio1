@@ -5,17 +5,22 @@ var numero =444;
 var texto1 = "bienvenido al curso de js";
 var texto2 = "CURSO ABURRIDO";
 
-var dato = numero.toString();
-    dato = texto1.toUpperCase();
-    dato = texto2.toLowerCase();
-console.log(dato);
+//#region Tema Anterior
+// var dato = numero.toString();
+//     dato = texto1.toUpperCase();
+//     dato = texto2.toLowerCase();
+// console.log(dato);
 
-//calcular longitud
-var nombre = "Ariel Villalona";
+// //calcular longitud
+// var nombre = "Ariel Villalona";
 
-console.log(nombre.length);
+// console.log(nombre.length);
 
-//contatenar
-//var uno = texto1+" "+texto2;
-var uno  = texto1.concat(" ",texto2);
-console.log(uno);
+// //contatenar
+// //var uno = texto1+" "+texto2;
+// var uno  = texto1.concat(" ",texto2);
+// console.log(uno);
+//#endregion
+
+var busqueda = texto1.indexOf("curso");
+console.log(busqueda);
