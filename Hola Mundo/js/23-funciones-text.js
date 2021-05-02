@@ -22,5 +22,7 @@ var texto2 = "CURSO ABURRIDO";
 // console.log(uno);
 //#endregion
 
-var busqueda = texto1.indexOf("curso");
+// var busqueda = texto1.indexOf("curso");
+// var busqueda = texto1.search("curso");
+var busqueda = texto1.match(/curso/g);
 console.log(busqueda);
