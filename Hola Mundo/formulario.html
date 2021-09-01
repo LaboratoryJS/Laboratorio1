@@ -30,10 +30,13 @@
             <form action="#" method="POST" id="formulario" onsubmit="return false">
                 <label for="nombre">Nombres</label> </br>
                 <input type="text" name="nombre" id="nombre" ></br>
+                <p id="error_nombre"></p></br>
                 <label for="apellido">Apellidos</label></br>
                 <input type="text" name="apellido" id="apellido" ></br>
+                <p id="error_apellido"></p></br>
                 <label for="edad">Edad</label></br>
                 <input type="number" name="edad" id="edad" min="1" max="100"></br>
+                <p id="error_edad"></p>
 
                 <input type="submit" value="enviar" id="submit"/></br>
             </form>
