@@ -8,24 +8,101 @@
 
     <!--estilos -->
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
 </head>
 <body>
     <section id="global">
+        <!--Cabecera-->
         <header>
             <div id="logo">
-                PROYECTO JS
+                <h1>PROYECTO JS</h1>
             </div>
+            <div class="clearfix"></div>
             <!--menu-->
-            <navbar>
-                <ul id="menu">
+            <nav id="menu">
+                <ul>
                     <li><a href="#">INICIO</a></li>
                     <li><a href="#">RELOJ</a></li>
                     <li><a href="#">CONTACTO</a></li>
                     <li><a href="#">SOBRE MI</a></li>
                 </ul>
-            </navbar>
+            </nav>
             <!--.menu-->
+
+            <!--slider-->
+            <div id="slider">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <!--.slider-->
+
+            <!--contenido-->
+            <section id="content">
+                <div id="posts">
+                    <article class="post">
+                        <h2>TITULO DEL ARTICULO</h2>
+                        <span class="date">Fecha de publicacion</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed egestas felis. Fusce non cursus diam, ac euismod sem. Sed eleifend posuere sem, sit amet ullamcorper metus molestie eget. Integer nibh augue, dapibus id lectus efficitur, molestie rhoncus ligula. Nam ac euismod nulla. Sed convallis et ante sed rhoncus. Phasellus accumsan ac neque ut venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus dapibus pharetra pellentesque. Mauris ultricies tincidunt bibendum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <a href="#" class="buttom-more">Leer mas</a>
+                    </article>
+                    <article class="post">
+                        <h2>TITULO DEL ARTICULO</h2>
+                        <span class="date">Fecha de publicacion</span>
+                        <p>
+                            Integer vulputate quis orci non imperdiet. Suspendisse in mi tellus. Morbi at feugiat mauris, vel pellentesque urna. In faucibus aliquet magna a molestie. Sed viverra tellus lorem, nec dapibus nisi condimentum ac. Cras nisi eros, feugiat non tortor et, luctus pharetra arcu. Nulla massa ipsum, semper nec pellentesque et, vulputate semper lectus. Nulla eget ultrices tellus. Morbi interdum aliquet mauris, quis sollicitudin nisl porttitor sit amet. Sed blandit, mauris sit amet mattis condimentum, nulla neque vehicula quam, a luctus leo purus nec leo. Proin sit amet ornare felis. Aenean vestibulum eros sit amet nisl tincidunt porttitor. Suspendisse potenti. Etiam eu hendrerit arcu. Sed consequat pulvinar ullamcorper.
+                        </p>
+                        <a href="#" class="buttom-more">Leer mas</a>
+                    </article>
+                </div>
+                <aside id="sidebar">
+                    <div id="about">
+                        <h4><span>Quien Soy</span></h4>
+                        <img src="img/caracol.jpg"/>
+                        <p>Integer vulputate quis orci non imperdiet. Suspendisse in mi tellus. Morbi at feugiat mauris, vel pellentesque urna.</p>
+                    </div>
+                    <div id="login">
+                        <h4><span>Identificate</span></h4>
+                        <form>
+                            <label for="name">nombre</label>
+                            <input type="text" name="nombre">
+                            <label for="email">email</label>
+                            <input type="email" name="email">
+                            <label for="pass">Contrasena</label>
+                            <input type="password" name="pass">
+                            <input type="submit">
+                        </form>
+                    </div>
+                </aside>
+                <div class="clearfix"></div>
+            </section>
+            <!--.contenido-->
         </header>
     </section>
+    <footer>
+        CURSO MASTER EN JS &copy;
+    </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
