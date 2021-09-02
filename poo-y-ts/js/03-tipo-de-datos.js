@@ -1,0 +1,9 @@
+var cadena = 'a.villalona.reyes@hotmail.com';
+var edad = 12;
+var verdadero_falso = true;
+var cualquiera = "hola";
+cualquiera = 54; //esto es permirido en la variable any
+var lenguajes = [1, 2, 3, 4];
+var year = [true, 2, '3', 4, '5'];
+var varios = "hola";
+varios = 5;
