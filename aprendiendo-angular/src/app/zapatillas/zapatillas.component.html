@@ -1,9 +1,7 @@
-<div [ngStyle]="{'background':config.color}">
+<div>
     <h2>{{Titulo}}</h2>
-    <p>{{Description}}</p>
     <ul>
-        <li>ribu
-        <li>oson
-        <li>nike
+        <li *ngFor="let deportivas of Zapatillas">
+            {{deportivas.Nombre}} - <strong>{{deportivas.Precio}}</strong></li>
     </ul>
 </div>
