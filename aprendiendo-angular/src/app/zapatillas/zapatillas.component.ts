@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { configuracion } from "../Models/configuracion";
 
 @Component({
     selector:'zapatillas',
@@ -6,11 +7,15 @@ import { Component } from "@angular/core";
 })
 export class ZapatillasComponent{
     public Titulo:string;
+    public Description:string;
+    public config;
     
     /**
      *
      */
     constructor() {
-        this.Titulo = "ZAPATILLAS AL POR MAYOR";
+        this.Titulo = configuracion.titulo;
+        this.Description = configuracion.descripcion;
+        this.config = configuracion;
     }
 }
