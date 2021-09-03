@@ -19,7 +19,7 @@ export class ConfigServices{
     GetAll(){
         return this.http.get<Config>(this.url)
         .pipe(
-            retry:3,
+            retry(3),
             catchError(this.handleError)
         );
     }
