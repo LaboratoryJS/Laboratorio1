@@ -33,4 +33,9 @@ export class ZapatillasComponent implements OnInit{
             this.marcas.push(value.Marca);
         });
     }
+
+    enterprecionado(){
+        document.querySelector("#parrafo");
+        console.log(this.miMarca);
+    }
 }

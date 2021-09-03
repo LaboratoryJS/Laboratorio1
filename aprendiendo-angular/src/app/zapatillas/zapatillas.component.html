@@ -7,8 +7,9 @@
 <div>
     <h2>{{Titulo}}</h2>
 
-    <p>Add marca</p>
-    <p><input type="text" [(ngModel)]="miMarca"/></p>
+    <p id="parrafo">Add marca</p>
+    <p><input type="text" [(ngModel)]="miMarca"
+        (keyup.enter)="enterprecionado()"/></p>
     <p>{{miMarca}}</p>
     <ul>
         <li *ngFor="let deportiva of Zapatillas">
