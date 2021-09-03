@@ -1,9 +1,21 @@
+<p>Las Mejores Marcas</p>
+<ul>
+    <li *ngFor='let marca of marcas'>
+        {{marca}}
+    </li>
+</ul>
 <div>
     <h2>{{Titulo}}</h2>
+
+    <p>Add marca</p>
+    <p><input type="text" [(ngModel)]="miMarca"/></p>
+    <p>{{miMarca}}</p>
     <ul>
         <li *ngFor="let deportiva of Zapatillas">
-            {{deportiva.Nombre}} - <strong>{{deportiva.Precio}}</strong>
-            
+            <span [ngStyle]="{
+                'text-decoration':!deportiva.Stock? 'line-through wavy red':'none'
+            }">{{deportiva.Nombre}} - <strong>{{deportiva.Precio}}</strong></span>
+
             <span *ngIf="deportiva.Precio<1000"
                 [style.color]="deportiva.Precio<1000?'green':'transparente'"> ¡EN OFERTA!</span>
         </li>
