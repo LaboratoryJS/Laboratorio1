@@ -42,9 +42,12 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #1976d2;
+    background-color: blue;
     color: white;
     font-weight: 600;
+  }
+  .toolbar a{
+    color: white;
   }
 
   .toolbar img {
@@ -172,6 +175,10 @@
 
   a:hover {
     color: #125699;
+  }
+
+  .active{
+    background: #ccc;
   }
 
   .terminal {
@@ -309,8 +316,19 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Aprendiendo Angular</span>
-    <div class="spacer"></div>
+  <span>Aprendiendo Angular |</span>
+  &nbsp;
+  <a [routerLink]="['/']">Home |</a>
+  &nbsp;
+  <a routerLink="/juegos" routerLinkActive="active">Juegos |</a>
+  &nbsp;
+  <a routerLink="/zapatillas" routerLinkActive="active">Zapatillas |</a>
+  &nbsp;
+  <a routerLink="/cursos" routerLinkActive="active">Cursos |</a>
+  &nbsp;
+  <a routerLink="/externo" routerLinkActive="active">Externo |</a>
+  &nbsp;
+  <div class="spacer"></div>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
       <svg id="twitter-logo" height="24" data-name="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
         <rect width="400" height="400" fill="none"/>
@@ -326,10 +344,11 @@
 </div>
 
 <div class="content" role="main">
-
+  <!-- The routed views render in the <router-outlet>-->
+  <router-outlet></router-outlet>
   <!-- <button (click)="OcultarVideoJuegos(false)" *ngIf="Mostrar_VideoJuegos">OCULTAR VIDEO JUEGOS</button> -->
   <!-- <button (click)="OcultarVideoJuegos(true)" *ngIf="!Mostrar_VideoJuegos">MOSTRAR VIDEO JUEGOS</button> -->
-  <zapatillas></zapatillas>
+  <!-- <zapatillas></zapatillas> -->
   <!-- <videojuego *ngIf="Mostrar_VideoJuegos"></videojuego> -->
   <!-- <app-cursos></app-cursos> -->
 
@@ -503,5 +522,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>

@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="userId" (keyup.enter)="getUser()">
+
+<div *ngIf="!user">
+CARGANDO
+</div>
+
+
+
+<div *ngIf="user">
+  <p><img src="{{user.avatar}}" alt=""></p>
+  <p>{{user.first_name}}</p>
+  <p>{{user.last_name}}</p>
+  <p>{{user.email}}</p>
+</div>

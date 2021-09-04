@@ -15,7 +15,13 @@
         <li *ngFor="let deportiva of Zapatillas">
             <span [ngStyle]="{
                 'text-decoration':!deportiva.Stock? 'line-through wavy red':'none'
-            }">{{deportiva.Nombre}} - <strong>{{deportiva.Precio}}</strong></span>
+            }">{{deportiva.Nombre}} - <strong
+              [ngClass]="{
+                AltoPrecio: deportiva.Precio>1000,
+                Subrayado:deportiva.Marca=='Nike'
+              }
+              "
+            >{{deportiva.Precio}}</strong></span>
 
             <span *ngIf="deportiva.Precio<1000"
                 [style.color]="deportiva.Precio<1000?'green':'transparente'"> ¡EN OFERTA!</span>
