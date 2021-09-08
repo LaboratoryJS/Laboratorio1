@@ -27,6 +27,11 @@ export class ConfigServices{
           catchError(this.handleError)
         )
     }
+    async AddUser(user:any):Promise<Observable<any>>{
+      let body = JSON.stringify(user);
+      let header = new HttpHeaders().set('Content-Type','application/json');
+      return await this.http.post(this.url+'api/users',body,{headers:header});
+    }
 
     private handleError(error: HttpErrorResponse) {
       if (error.status === 0) {

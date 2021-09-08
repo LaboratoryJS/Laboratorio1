@@ -11,11 +11,16 @@ export class ExternoComponent implements OnInit {
 
   public user:any;
   public userId:any;
+  public new_user:any;
 
   constructor(
     private _configServices:ConfigServices
     ){
       this.userId=1;
+      this.new_user={
+        "name":"",
+        "job":""
+          };
     }
 
   ngOnInit(): void {
@@ -27,6 +32,11 @@ export class ExternoComponent implements OnInit {
       {
         this.user = data.data;
       });
-    }
+  }
 
+  async OnSubmit(newUser:any){
+    (await this._configServices.AddUser(this.new_user)).subscribe((data)=>{
+      console.log(data);
+    });
+  }
 }
