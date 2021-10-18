@@ -14,7 +14,7 @@ var controller = {
     },
     getListProyect:function(req,res){
 
-        Project.find((err,projectStored)=>{
+        Project.find({}).sort('-year').exec((err,projectStored)=>{
             if(err) return res.status(500).send({message:"error interno"});
 
             if(!projectStored) return res.status(204).send({message:"recurso no encontrado"});
@@ -52,6 +52,28 @@ var controller = {
         });
     },
     updateProyect:function(req,res){
+        var projectId = req.params.id;
+        var update = req.body;
+
+        Project.findByIdAndUpdate(projectId,update,{new:true},(err,projectStored)=>{
+            if(err) return res.status(500).send({message:"error interno"});
+
+            if(!projectStored) return res.status(204).send({message:"recurso no encontrado"});
+
+
+            return res.status(200).send({projectStored});
+        });
+    },
+    deleted:function(req,res){
+        var projectId = req.params.id;
+        var update = req.body;
+
+        Project.findByIdAndRemove(projectId,(err,projectStored)=>{
+            if(err) return res.status(500).send({message:"error interno"});
+            if(!projectStored) return res.status(204).send({message:"recurso no encontrado"});
+
+            return res.status(200).send({projectStored});
+        });
     }
 };
 

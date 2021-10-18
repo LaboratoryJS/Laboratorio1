@@ -10,5 +10,7 @@ route.get('/',projectController.getListProyect);
 route.get('/:id',projectController.getProject);
 route.post('/',projectController.saveProyect);
 route.put('/:id',projectController.updateProyect);
+route.delete('/:id',projectController.deleted);
+
 
 module.exports = route;
