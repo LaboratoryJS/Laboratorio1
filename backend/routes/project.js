@@ -1,16 +1,19 @@
 'use strict'
 
 var express = require('express');
-var projectController = require('../controllers/project');
+var {GetAll,GetById,Post,Delete, Put, UploadImage} = require('../controllers/project');
 
 var route = express.Router();
-route.get('/home',projectController.home);
-route.post('/test',projectController.test);
-route.get('/',projectController.getListProyect);
-route.get('/:id',projectController.getProject);
-route.post('/',projectController.saveProyect);
-route.put('/:id',projectController.updateProyect);
-route.delete('/:id',projectController.deleted);
+
+var multipart = require('connect-multiparty');
+var multipartMiddleware = multipart({uploadDir: './uploads'});
+
+route.get('/',GetAll);
+route.get('/:id',GetById);
+route.post('/',Post);
+route.put('/:id',Put);
+route.delete('/:id',Delete);
+route.post('/uploadImage/:id',multipartMiddleware,UploadImage);
 
 
 module.exports = route;
