@@ -1,10 +1,15 @@
-<h1>Portafolio</h1>
-
-<ul>
-  <li><a [routerLink]="['/sobre-mi']">Sobre Mi</a></li>
-  <li><a [routerLink]="['/proyecto']">Proyectos</a></li>
-  <li><a [routerLink]="['/crear-proyecto']">Crear Proyectos</a></li>
-  <li><a [routerLink]="['/contacto']">Contacto</a></li>
-</ul>
-
-<router-outlet></router-outlet>
+<header>
+  <ul>
+    <li><a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']">Sobre Mi</a></li>
+    <li><a [routerLink]="['/proyecto']" [routerLinkActive]="['actived']">Proyectos</a></li>
+    <li id="logo"><a href="#">AV</a></li>
+    <li><a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']">Crear Proyectos</a></li>
+    <li><a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a></li>
+  </ul>
+</header>
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+<footer>
+  Ariel Villalona - SoSoViSh &copy;
+</footer>
