@@ -22,4 +22,10 @@ export class ProjecService{
   testService(){
     return 'Probando el servicio de Angular';
   }
+  saveProject(project:Project):Observable<Project>{
+    let params = JSON.stringify(project);
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+
+    return this._http.post<Project>(`${this.url}project`,params,{headers});
+  }
 }

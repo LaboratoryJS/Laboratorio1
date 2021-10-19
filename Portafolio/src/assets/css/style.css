@@ -191,3 +191,23 @@ form input[type="submit"]:hover{
   background: rgba(53,103,164,0.8);
   border:1px solid rgba(13,67,133,1);
 }
+
+.form-error{
+  padding: 5px;
+  color:red;
+  font-size:25px;
+}
+
+form input[disabled]{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.message{
+  padding:5px;
+  width:24%;
+  border: 1px solid #eee;
+  color:rgb(0, 255, 0);
+  font-family: "finger";
+  font-size: 25px;
+}
