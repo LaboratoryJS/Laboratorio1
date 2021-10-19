@@ -207,7 +207,7 @@ form input[disabled]{
   padding:5px;
   width:24%;
   border: 1px solid #eee;
-  color:rgb(0, 255, 0);
+  color:green;
   font-family: "finger";
   font-size: 25px;
 }

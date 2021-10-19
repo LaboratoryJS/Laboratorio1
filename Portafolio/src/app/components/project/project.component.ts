@@ -1,15 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import {Project} from '../../models/project';
+import { Global } from 'src/app/services/global';
+import { ProjecService } from 'src/app/services/project.service'
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.css'],
+  providers: [ProjecService]
 })
 export class ProjectComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  public projects:Project[];
+  constructor(
+    private _projectService:ProjecService
+  ) {
+    this.projects = new Array<Project>();
   }
 
+  ngOnInit(): void {
+    this.getProjects();
+  }
+
+
+  getProjects(){
+    this._projectService.getProjects().subscribe(
+      res=>{
+        if(res){
+          this.projects = res;
+        }
+      },
+      error=>{
+        console.log(error);
+      });
+  }
 }
