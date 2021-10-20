@@ -14,16 +14,16 @@
     margin:0px;
     padding:0px;
 }
+
 body{
   font-family: "yanone",Arial, Helvetica, sans-serif;
   font-size: 20px;
-  background:url('../img/pattern.png');
-  background-attachment: fixed;
 }
 .clearfix{
   float:none;
   clear:both;
 }
+
 /*Barra de navegacion - cabecera*/
 header{
   display: block;
@@ -60,13 +60,13 @@ header ul li a{
 }
 
 header ul li a:hover,.actived{
-  background: rgba(0,0,0,0.8)
+  background: rgba(0,0,0,0.6)
 }
 
 /*LOGOTIPO*/
 #logo{
   font-family: "finger";
-  font-size: 30px;
+  font-size: 35px;
 }
 
 #logo a{
@@ -84,20 +84,17 @@ header ul li a:hover,.actived{
 #content{
   min-height: 700px;
   padding-top: 90px;
-  width:80%;
+  width:100%;
   margin:0px auto;
-  box-shadow: 0px 0px 40px black;
-  border-left: 1px solid #b7b7b7;
-  border-right: 1px solid #b7b7b7;
   background: rgba(255,255,255,0.7);
 }
 
 /*footer*/
 footer{
   width:75%;
-  margin:0px auto;
+  margin: 100px auto;
   padding-top: 15px;
-  color: rgba(0,0,0,0.5)
+  color: rgba(0,0,0,0.5);
 }
 
 
@@ -146,7 +143,7 @@ article.about{
 .container{
   padding: 50px;
   padding-top: 10px;
-
+  margin-top: 20px;
 }
 
 .container h2{
@@ -159,6 +156,7 @@ article.about{
 form{
   width:50%;
 }
+
 form label{
   display: block;
   width:100%;
@@ -210,4 +208,37 @@ form input[disabled]{
   color:green;
   font-family: "finger";
   font-size: 25px;
+}
+
+.project{
+  display: block;
+  justify-content: center;
+  float:left;
+  width:20%;
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+
+.project .card{
+  border-radius: 5px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.project .card img{
+  justify-content: center;
+  width:100%;
+}
+
+.project .card .image{
+  height:200px;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.card .cardText{
+  background-color: rgba(0, 0, 0, 0.06);
+  opacity: .9;
+  padding: 0;
 }

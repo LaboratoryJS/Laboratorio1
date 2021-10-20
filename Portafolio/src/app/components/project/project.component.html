@@ -1,5 +1,13 @@
 <div class="container">
-  <ul>
-    <li *ngFor="let project of projects">{{project.name}}</li>
-  </ul>
+  <div class="project" *ngFor="let project of projects">
+    <div class="card">
+      <div class='image'>
+        <img *ngIf='project.image != null' src="{{url+project.image}}">
+      </div>
+      <div class="cardText">
+        <h3>{{project.name}}</h3>
+        <p>{{project.category}}</p>
+      </div>
+    </div>
+  </div>
 </div>

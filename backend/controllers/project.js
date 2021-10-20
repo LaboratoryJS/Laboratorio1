@@ -1,6 +1,7 @@
 'use strict'
 var Project = require('../models/project');
 var fs = require('fs');
+var path = require('path');
 
 var controller = {
     GetAll:function(req,res){
@@ -88,6 +89,19 @@ var controller = {
         }else{
             return res.status(400).send(projectUpdate);
         }
+    },
+    DownloadImage:function(req,res){
+        var file = req.params.id;
+        var path_file = './uploads/'+file;
+
+        fs.access(file,(exists)=>{
+            if(exists){
+                return res.sendFile(path.resolve(path_file));
+            }
+            else{
+                return res.status(204).send({message:'no existe la imagen...'});
+            }
+        });
     }
 };
 

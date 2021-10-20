@@ -1,7 +1,7 @@
 'use strict'
 
 var express = require('express');
-var {GetAll,GetById,Post,Delete, Put, UploadImage} = require('../controllers/project');
+var {GetAll,GetById,Post,Delete, Put, UploadImage, DownloadImage} = require('../controllers/project');
 
 var route = express.Router();
 
@@ -14,6 +14,7 @@ route.post('/',Post);
 route.put('/:id',Put);
 route.delete('/:id',Delete);
 route.post('/uploadImage/:id',multipartMiddleware,UploadImage);
+route.get('/image/:id',DownloadImage);
 
 
 module.exports = route;

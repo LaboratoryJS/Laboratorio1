@@ -11,10 +11,13 @@ import { ProjecService } from 'src/app/services/project.service'
 })
 export class ProjectComponent implements OnInit {
   public projects:Project[];
+  public url:string;
+
   constructor(
     private _projectService:ProjecService
   ) {
     this.projects = new Array<Project>();
+    this.url = Global.url+'project/image/';
   }
 
   ngOnInit(): void {
